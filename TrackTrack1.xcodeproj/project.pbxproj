@@ -13,10 +13,11 @@
 		29B91CE425B9FA3F00708264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29B91CE225B9FA3F00708264 /* Main.storyboard */; };
 		29B91CE625B9FA4200708264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29B91CE525B9FA4200708264 /* Assets.xcassets */; };
 		29B91CE925B9FA4200708264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29B91CE725B9FA4200708264 /* LaunchScreen.storyboard */; };
-		29B91CF525B9FA9600708264 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B91CF425B9FA9600708264 /* Student.swift */; };
+		29B91CF525B9FA9600708264 /* Jumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B91CF425B9FA9600708264 /* Jumper.swift */; };
 		29B91CF925B9FAB600708264 /* Competition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B91CF825B9FAB600708264 /* Competition.swift */; };
 		29B91CFC25B9FCE100708264 /* V.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B91CFB25B9FCE100708264 /* V.swift */; };
 		29B91CFF25BA03DD00708264 /* JumperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B91CFE25BA03DD00708264 /* JumperController.swift */; };
+		29B91D0325BA202200708264 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B91D0225BA202200708264 /* Brain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,11 @@
 		29B91CE525B9FA4200708264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29B91CE825B9FA4200708264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29B91CEA25B9FA4200708264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29B91CF425B9FA9600708264 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		29B91CF425B9FA9600708264 /* Jumper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumper.swift; sourceTree = "<group>"; };
 		29B91CF825B9FAB600708264 /* Competition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Competition.swift; sourceTree = "<group>"; };
 		29B91CFB25B9FCE100708264 /* V.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.swift; sourceTree = "<group>"; };
 		29B91CFE25BA03DD00708264 /* JumperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumperController.swift; sourceTree = "<group>"; };
+		29B91D0225BA202200708264 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 		29B91CF125B9FA6000708264 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				29B91CF425B9FA9600708264 /* Student.swift */,
+				29B91D0225BA202200708264 /* Brain.swift */,
+				29B91CF425B9FA9600708264 /* Jumper.swift */,
 				29B91CF825B9FAB600708264 /* Competition.swift */,
 				29B91CFB25B9FCE100708264 /* V.swift */,
 			);
@@ -175,11 +178,12 @@
 			files = (
 				29B91CFC25B9FCE100708264 /* V.swift in Sources */,
 				29B91CFF25BA03DD00708264 /* JumperController.swift in Sources */,
+				29B91D0325BA202200708264 /* Brain.swift in Sources */,
 				29B91CE125B9FA3F00708264 /* ViewController.swift in Sources */,
 				29B91CF925B9FAB600708264 /* Competition.swift in Sources */,
 				29B91CDD25B9FA3F00708264 /* AppDelegate.swift in Sources */,
 				29B91CDF25B9FA3F00708264 /* SceneDelegate.swift in Sources */,
-				29B91CF525B9FA9600708264 /* Student.swift in Sources */,
+				29B91CF525B9FA9600708264 /* Jumper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
