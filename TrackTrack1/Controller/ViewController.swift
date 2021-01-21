@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
         
         V.competitionPassed = V.competitions[indexPath.row] 
-        self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+        self.performSegue(withIdentifier: "toJumpers", sender: self)
     }
 
 
