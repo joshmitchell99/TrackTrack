@@ -9,5 +9,5 @@ import Foundation
 
 struct V {
     static var competitions = [Competition]()
-    static var competitionPassed = Competition()
+    static var competitionPassedIndex = -1
 }

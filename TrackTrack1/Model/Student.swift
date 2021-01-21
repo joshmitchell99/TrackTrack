@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Student {
+struct Jumper {
     var name = ""
     var jumps = [Float]()
 }

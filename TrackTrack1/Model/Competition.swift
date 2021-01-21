@@ -9,5 +9,5 @@ import Foundation
 
 struct Competition {
     var name = ""
-    var students = [Student]()
+    var jumpers = [Jumper]()
 }
