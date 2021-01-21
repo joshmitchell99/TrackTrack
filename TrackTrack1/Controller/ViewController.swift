@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let brain = Brain()
+    
     @IBOutlet weak var myTableView: UITableView!
     
     override func viewDidLoad() {
@@ -28,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             if textField?.text == "" {return}
-            var competition = Competition()
+            var competition = Competition(from: <#T##Decoder#>)
             competition.name = textField!.text!
             V.competitions.append(competition)
             self.myTableView.reloadData()
@@ -51,7 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        V.competitionPassedIndex = indexPath.row
+        V.compIndex = indexPath.row
         self.performSegue(withIdentifier: "toJumpers", sender: self)
     }
     

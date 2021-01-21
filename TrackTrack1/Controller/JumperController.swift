@@ -27,7 +27,7 @@ class JumperController: UIViewController, UITableViewDelegate, UITableViewDataSo
         myTableView.delegate = self
         myTableView.dataSource = self
         
-        titleLabel.title = V.competitions[V.competitionPassedIndex].name
+        titleLabel.title = V.competitions[V.compIndex].name
         
         self.myTableView.reloadData()
     }
@@ -45,7 +45,7 @@ class JumperController: UIViewController, UITableViewDelegate, UITableViewDataSo
         jumper.jumps.append(Float(secondJumpField.text!)!)
         jumper.jumps.append(Float(thirdJumpField.text!)!)
         
-        V.competitions[V.competitionPassedIndex].jumpers.append(jumper)
+        V.competitions[V.compIndex].jumpers.append(jumper)
         
         rankJumpers()
         myTableView.reloadData()
@@ -63,12 +63,12 @@ class JumperController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     //MARK: - TABLEVIEW ESSENTIAL FUNCTIONS
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return V.competitions[V.competitionPassedIndex].jumpers.count
+        return V.competitions[V.compIndex].jumpers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath)
-        let jumper = V.competitions[V.competitionPassedIndex].jumpers[indexPath.row]
+        let jumper = V.competitions[V.compIndex].jumpers[indexPath.row]
         
         let jumps = jumper.jumps
         cell.textLabel?.text = jumper.name + ", " + String(jumps[0]) + ", " + String(jumps[1]) + ", " + String(jumps[2])
@@ -78,7 +78,7 @@ class JumperController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     
     func rankJumpers() {
-        V.competitions[V.competitionPassedIndex].jumpers.sort {
+        V.competitions[V.compIndex].jumpers.sort {
             $0.jumps.max()! > $1.jumps.max()!
         }
     }

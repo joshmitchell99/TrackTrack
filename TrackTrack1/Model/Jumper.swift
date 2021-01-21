@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Jumper {
+struct Jumper: Codable {
     var name = ""
     var jumps = [Float]()
+    
+    init(name: String, jumps: [Float]) {
+        self.name = name
+        self.jumps = jumps
+    }
 }

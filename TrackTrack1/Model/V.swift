@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct V: Codable {
-    static var competitions = [Competition]()
-    static var competitionPassedIndex = -1
+struct V {
+    static var competitions: Codable = [Competition]()
+    static var compIndex = -1
 }

@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Competition {
-    var name = ""
+struct Competition: Codable {
+    var name = "name"
     var jumpers = [Jumper]()
+    
+    init(name: String, jumpers: [Jumper]) {
+        self.name = name
+        self.jumpers = [Jumper(name: "test", jumps: [0])]
+    }
 }
