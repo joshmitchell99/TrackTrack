@@ -55,6 +55,7 @@
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="Fe0-ih-yVj" id="6th-Th-gqG"/>
+                        <segue destination="Y2L-AC-SED" kind="presentation" identifier="toJumpers" modalPresentationStyle="fullScreen" id="M6M-7N-2bu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,40 +70,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FxX-OY-Bts">
-                                <rect key="frame" x="0.0" y="200" width="414" height="696"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FxX-OY-Bts">
+                                <rect key="frame" x="0.0" y="204" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXT-ZR-Mue">
-                                <rect key="frame" x="20" y="82" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="5xK-yM-eEM">
+                                <rect key="frame" x="20" y="162" width="374" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9T-c0-TI7">
+                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYC-iI-qnl">
+                                        <rect key="frame" x="125.5" y="0.0" width="123" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NDP-rh-ywE">
+                                        <rect key="frame" x="251.5" y="0.0" width="122.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXT-ZR-Mue">
+                                <rect key="frame" x="20" y="120" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t9G-Ko-gYz">
-                                <rect key="frame" x="20" y="134" width="125" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GdV-cx-hrK">
-                                <rect key="frame" x="269" y="134" width="125" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o04-Aw-IcL">
-                                <rect key="frame" x="145" y="134" width="125" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpm-WC-TMl">
+                                <rect key="frame" x="298" y="82" width="96" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="4rn-d9-lQK"/>
+                                    <constraint firstAttribute="height" constant="30" id="IP0-hn-Ojf"/>
+                                </constraints>
+                                <state key="normal" title="+ add student"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1VQ-Y7-SCH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1VQ-Y7-SCH" firstAttribute="trailing" secondItem="5xK-yM-eEM" secondAttribute="trailing" constant="20" id="2qA-5K-5Zh"/>
+                            <constraint firstItem="1VQ-Y7-SCH" firstAttribute="trailing" secondItem="qXT-ZR-Mue" secondAttribute="trailing" constant="20" id="77C-Na-dsQ"/>
                             <constraint firstItem="FxX-OY-Bts" firstAttribute="trailing" secondItem="1VQ-Y7-SCH" secondAttribute="trailing" id="Ew8-Vs-w2t"/>
+                            <constraint firstItem="FxX-OY-Bts" firstAttribute="top" secondItem="5xK-yM-eEM" secondAttribute="bottom" constant="8" id="NR4-by-8sV"/>
+                            <constraint firstItem="qXT-ZR-Mue" firstAttribute="top" secondItem="Dpm-WC-TMl" secondAttribute="bottom" constant="8" symbolic="YES" id="PbN-Au-qeE"/>
+                            <constraint firstItem="5xK-yM-eEM" firstAttribute="top" secondItem="qXT-ZR-Mue" secondAttribute="bottom" constant="8" id="a56-2b-IzL"/>
                             <constraint firstAttribute="bottom" secondItem="FxX-OY-Bts" secondAttribute="bottom" id="bRn-is-q4w"/>
+                            <constraint firstItem="5xK-yM-eEM" firstAttribute="leading" secondItem="1VQ-Y7-SCH" secondAttribute="leading" constant="20" id="boK-3T-GTs"/>
+                            <constraint firstItem="1VQ-Y7-SCH" firstAttribute="trailing" secondItem="Dpm-WC-TMl" secondAttribute="trailing" constant="20" id="j0a-Yc-NFy"/>
+                            <constraint firstItem="Dpm-WC-TMl" firstAttribute="top" secondItem="1VQ-Y7-SCH" secondAttribute="top" constant="38" id="qpA-zk-4Yc"/>
+                            <constraint firstItem="qXT-ZR-Mue" firstAttribute="leading" secondItem="1VQ-Y7-SCH" secondAttribute="leading" constant="20" id="r4n-q4-zWh"/>
                             <constraint firstItem="FxX-OY-Bts" firstAttribute="leading" secondItem="1VQ-Y7-SCH" secondAttribute="leading" id="uIc-K9-gFl"/>
                         </constraints>
                     </view>
