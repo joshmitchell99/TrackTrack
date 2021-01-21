@@ -49,7 +49,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        V.competitionPassed = V.competitions[indexPath.row]
+        V.competitionPassed = V.competitions[indexPath.row] 
         self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
     }
 
