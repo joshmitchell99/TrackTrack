@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-struct Brain: Codable {
+struct Brain {
     
     // data file path
     var dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Competitions.plist")
     
     // saves the array to the plist
-    func saveItems(competitonsArray: [V]) {
+    func saveItems(competitonsArray: V) {
         let encoder = PropertyListEncoder()
         do {
             let data = try encoder.encode(competitonsArray)
@@ -25,17 +25,17 @@ struct Brain: Codable {
     }
     
     // loads the data from the plist
-    func loadItems() -> [V] {
+    func loadItems() -> V {
         if let data = try? Data(contentsOf: dataFilePath!) {
             let decoder = PropertyListDecoder()
             do {
-                let competitionArray = try decoder.decode([V].self, from: data)
+                let competitionArray = try decoder.decode(V.self, from: data)
                 return competitionArray
             } catch {
                 print("Error catching the decding, \(error)")
             }
         }
-        let competitonArray = [V]()
+        let competitonArray = V()
         return competitonArray
     }
     
