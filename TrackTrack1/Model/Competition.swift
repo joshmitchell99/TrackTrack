@@ -11,8 +11,8 @@ struct Competition: Codable {
     var name = "name"
     var jumpers = [Jumper]()
     
-    init(name: String, jumpers: [Jumper]) {
+    init(name: String) {
         self.name = name
-        self.jumpers = [Jumper(name: "test", jumps: [0])]
+        self.jumpers = [Jumper(name: "test123123", jumps: [0])]
     }
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 struct V {
-    static var competitions: Codable = [Competition]()
+    static var competitions = [Competition]()
     static var compIndex = -1
 }

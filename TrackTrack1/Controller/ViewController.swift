@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let brain = Brain()
+    var brain = Brain()
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -19,10 +19,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myTableView.delegate = self
         myTableView.dataSource = self
         
+        brain.loadItems()
+        
         self.myTableView.reloadData()
     }
     
-    @IBAction func newCompPressed(_ sender: UIButton) {
+    @IBAction func newCompPressed(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "New competition!", message: "Enter the name of the competition below:", preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.autocapitalizationType = .words
@@ -30,13 +32,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             if textField?.text == "" {return}
-            var competition = Competition(from: <#T##Decoder#>)
-            competition.name = textField!.text!
+            let competition = Competition(name: textField!.text!)
             V.competitions.append(competition)
+            self.brain.saveItems()
             self.myTableView.reloadData()
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return V.competitions.count
